@@ -2,7 +2,7 @@
   console.log("Script included and called");
   
   var servicesContent = '';
-  var servicesList = document.querySelector('#serviceList');
+  var services = document.querySelector('services');
 
   var services = [
     'Graphic Design',
@@ -17,6 +17,6 @@
   });
   
   console.log("servicesContent", servicesContent);
-  servicesList.innerHTML = servicesContent;
+  services.innerHTML = '<ul>'+servicesContent+'<ul>';
   
 })();
