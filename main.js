@@ -2,7 +2,7 @@
   console.log("Script included and called");
   
   var servicesContent = '';
-  var services = document.getElementsByTagName('services')[0];
+  var services = document.getElementsByTagName('services');
 
   var services = [
     'Graphic Design',
@@ -17,6 +17,6 @@
   });
   
   console.log("servicesContent", servicesContent);
-  services.innerHTML = '<ul>'+servicesContent+'<ul>';
+  services[0].innerHTML = '<ul>'+servicesContent+'<ul>';
   
 })();
