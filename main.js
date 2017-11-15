@@ -2,7 +2,7 @@
   console.log("Script included and called");
   
   var servicesContent = '';
-  var services = document.querySelector('services');
+  var services = document.getElementByTagName('services');
 
   var services = [
     'Graphic Design',
