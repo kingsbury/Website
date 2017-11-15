@@ -1,4 +1,6 @@
 (function(){
+  console.log("Script included and called");
+  
   var servicesContent = '';
   var servicesList = document.querySelector('#serviceList');
 
