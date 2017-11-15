@@ -3,7 +3,7 @@
   
   var servicesContent = '';
   var serviceList = document.registerElement('service-list');
-  var services = document.getElementsByTagName('service-list');
+  var servicesEl = document.getElementsByTagName('service-list');
 
   var services = [
     'Graphic Design',
@@ -19,6 +19,6 @@
   
   console.log("servicesContent", servicesContent);
   console.log("services", services);
-  services[0].innerHTML = '<ul>'+servicesContent+'<ul>';
+  servicesEl[0].innerHTML = '<ul>'+servicesContent+'<ul>';
   
 })();
