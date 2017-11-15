@@ -18,6 +18,7 @@
   });
   
   console.log("servicesContent", servicesContent);
+  console.log("services", services);
   services[0].innerHTML = '<ul>'+servicesContent+'<ul>';
   
 })();
