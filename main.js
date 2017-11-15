@@ -9,7 +9,7 @@
     'Illustration',
     'Web Design',
     'UI/UX Design',
-    'Other Cool Stuff'
+    'Other Cool Stuff' 
   ];
   
   services.forEach(function(service){
