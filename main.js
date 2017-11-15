@@ -1,6 +1,4 @@
 (function(){
-  console.log("Script included and called");
-  
   var servicesContent = '';
   var serviceList = document.registerElement('service-list');
   var servicesEl = document.getElementsByTagName('service-list');
@@ -17,8 +15,5 @@
     servicesContent+='<li>'+service+'</li>';
   });
   
-  console.log("servicesContent", servicesContent);
-  console.log("services", services);
-  servicesEl[0].innerHTML = '<ul>'+servicesContent+'<ul>';
-  
+  servicesEl[0].innerHTML = '<ul>'+servicesContent+'<ul>';  
 })();
