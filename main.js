@@ -1,7 +1,7 @@
 (function(){
   var servicesContent = '';
   var serviceList = document.registerElement('service-list');
-  var servicesEl = document.getElementsByTagName('service-list');
+  var servicesEl = document.getElementsByTagName('service-list')[0];
 
   var services = [
     'Graphic Design',
@@ -15,5 +15,5 @@
     servicesContent+='<li>'+service+'</li>';
   });
   
-  servicesEl[0].innerHTML = '<ul>'+servicesContent+'<ul>';  
+  servicesEl.innerHTML = '<ul>'+servicesContent+'<ul>';  
 })();
