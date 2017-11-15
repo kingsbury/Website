@@ -16,6 +16,6 @@
     servicesContent+='<li>'+service+'</li>';
   });
   
-  servicesList.innerHTML = serviceContent;
+  servicesList.innerHTML = servicesContent;
   
 })();
