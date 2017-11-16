@@ -1,7 +1,6 @@
 (function(){
-  var servicesContent = '';
-  var serviceList = document.registerElement('service-list');
-  var servicesEls = Array.prototype.slice.call( document.getElementsByTagName('service-list'), 0 );
+  var serviceList = document.registerElement('custom-list');
+  var lists = Array.prototype.slice.call( document.getElementsByTagName('custom-list'), 0 );
 
   var services = [
     'Graphic Design',
@@ -11,12 +10,26 @@
     'Other Cool Stuff' 
   ];
   
-  services.forEach(function(service){
-    servicesContent+='<li>'+service+'</li>';
-  });
+  var hobbies = [
+    'VWs',
+    'Art',
+    'Kids',
+    'Tennis',
+    'Other Cool Stuff' 
+  ];
   
-  servicesEls.forEach(function(el){
-    el.innerHTML = '<ul>'+servicesContent+'<ul>'; 
+  lists.forEach(function(el){
+    var src = el.getAttribute('list');
+    var list = createList(src);
+    el.innerHTML = '<ul>'+list+'<ul>'; 
   }); 
+  
+  function createList(src){
+    var content="";
+    src.forEach(function(item){
+      content+='<li>'+item+'</li>';
+    });
+    return content;
+  }
   
 })();
