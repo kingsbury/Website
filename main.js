@@ -2,7 +2,7 @@
   var serviceList = document.registerElement('custom-list');
   var lists = Array.prototype.slice.call( document.getElementsByTagName('custom-list'), 0 );
 
-  var services = [
+  this.services = [
     'Graphic Design',
     'Illustration',
     'Web Design',
@@ -10,7 +10,7 @@
     'Other Cool Stuff' 
   ];
   
-  var hobbies = [
+  this.hobbies = [
     'VWs',
     'Art',
     'Kids',
@@ -29,7 +29,7 @@
   
   function createList(listSrc){
     var content="";
-    listSrc.forEach(function(item){
+    this[listSrc].forEach(function(item){
       content+='<li>'+item+'</li>';
     });
     return content;
