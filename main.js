@@ -22,11 +22,14 @@
     var src = el.getAttribute('list');
     var list = createList(src);
     el.innerHTML = '<ul>'+list+'<ul>'; 
+    
+    console.log("src", src);
+    console.log("list", list);
   }); 
   
-  function createList(src){
+  function createList(listSrc){
     var content="";
-    src.forEach(function(item){
+    listSrc.forEach(function(item){
       content+='<li>'+item+'</li>';
     });
     return content;
