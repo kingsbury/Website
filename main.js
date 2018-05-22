@@ -7,7 +7,7 @@
   
   lists.forEach(function(el){
     var list = this[el.getAttribute('list')];
-    var items = list.map(function(item){ return `<li>${item}</li>`; });
+    var items = list.map(function(item){ return `<li>${item}</li>`; }).join('');
     el.innerHTML = `<ul>${items}<ul>`; 
   });   
 })();
