@@ -3,43 +3,85 @@
   <head>
     <title>Personal website of Casey Kingsbury</title>
     <link href="styles.css" rel="stylesheet">
+
+     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
   </head>
   
   <body>
-    <header></header>
     
-    <main>
-      <section>
-        <header>About</header>
-        <p>I’m a UI/UX Developer living and working in southeastern Alabama. I started doing web and graphic 
-          design in 1996 and over the last few years have started programming in JavaScript.</p>
-        <p>I enjoy finding creative ways to communicate information simply and have a passion for removing 
-          obstacles so customers can focus on their goals.</p>
-      </section>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+      // import React from "react"
+      // import ReactDOM from "react-dom"
 
-      <section>
-        <header>Resume</header>
-        <p>Coming Soon</p>
-        <!--Resume with descending timeline down the side-->
-      </section>
+      function App(){
 
-      <section>
-        <header>Portfolio</header>
-        <p>Coming Soon</p>
-        <!--AAA Cooper - use wayback machine to compare/contrast old and new websites. Highlight the logo revamp and updated look and feel that moved web division to a newer tech stack allowing for easier updates. 
-        OppSeek & Hive Buddy - start wireframes and planning (future examples once finished)
-        Maybe dig through work folders and see if I can find any old websites, logos, or illustrations that are worth using-->
-      </section>
-      
-      <section>
-        <header>Instagram</header>
-        <div class='embedsocial-instagram' data-ref="6aab368f517db9e74c8854c70fa35ef0ca50b901"></div>
-        <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialInstagramScript"));</script>
-      </section>
-    
-    </main>
-    
-    <footer>&copy;2020</footer>
+        let insta = (
+          function(d, s, id){
+            var js; 
+            if (d.getElementById(id)) {return;} 
+            js = d.createElement(s); 
+            js.id = id; 
+            js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialInstagramScript")
+        );
+
+        return (
+            <div>
+            <header></header>
+
+          <main>
+            <section>
+              <header>About</header>
+              <p>I’m a UI/UX Developer living and working in southeastern Alabama. I started doing web and graphic 
+                design in 1996 and over the last few years have started programming in JavaScript.</p>
+              <p>I enjoy finding creative ways to communicate information simply and have a passion for removing 
+                obstacles so customers can focus on their goals.</p>
+            </section>
+
+            <section>
+              <header>Resume</header>
+              <p>Coming Soon</p>
+              {
+              //<!--Resume with descending timeline down the side-->
+              }
+            </section>
+
+            <section>
+              <header>Portfolio</header>
+              <p>Coming Soon</p>
+              {
+              //AAA Cooper - use wayback machine to compare/contrast old and new websites. Highlight the logo revamp and updated look and feel that moved web division to a newer tech stack allowing for easier updates. 
+              //OppSeek & Hive Buddy - start wireframes and planning (future examples once finished)
+              //Maybe dig through work folders and see if I can find any old websites, logos, or illustrations that are worth using-->
+              }
+            </section>
+
+            <section>
+              <header>Instagram</header>
+              <div class='embedsocial-instagram' data-ref="6aab368f517db9e74c8854c70fa35ef0ca50b901"></div>
+              {
+                insta
+              }
+            </section>
+
+          </main>
+
+          <footer>&copy;2020</footer>
+          </div>
+        )
+      }
+
+
+      const domContainer = document.querySelector('#root');
+      ReactDOM.render(<App/>, domContainer);  
+    </script>
     
   </body>
 </html>
