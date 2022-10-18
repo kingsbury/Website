@@ -1,13 +1,13 @@
-(function(){
-  var serviceList = document.registerElement('custom-list');
-  var lists = Array.prototype.slice.call( document.getElementsByTagName('custom-list'), 0 );
+function renderLists(){
+  let lists = document.querySelectorAll("ul")
 
-  this.services = ['Graphic Design','Illustration','Web Design','UI/UX Design','Other Cool Stuff'];
-  this.hobbies = ['VWs','Art','Kids','Tennis','Other Cool Stuff'];
+  for(let list of lists){
+    let items=list.getAttribute('data-list').split(',');
+    let els = []
+    for(let item of items){
+      els.push(`<li>${item}</li>`)
+    }
+    list.innerHTML = els.join('')
+  }
   
-  lists.forEach(function(el){
-    var list = this[el.getAttribute('list')];
-    var items = list.map(function(item){ return `<li>${item}</li>`; }).join('');
-    el.innerHTML = `<ul>${items}<ul>`; 
-  });   
-})();
+}
