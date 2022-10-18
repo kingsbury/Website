@@ -11,15 +11,16 @@
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+
   </head>
   
   <body>
     
     <div id="root"></div>
     
+    <script src="/main.js"></script>
+
     <script type="text/babel">
-      // import React from "react"
-      // import ReactDOM from "react-dom"
 
       function App(){
 
@@ -39,31 +40,19 @@
           <main>
             <section>
               <header>About</header>
-              <p>I’m a UI/UX Developer living and working in southeastern Alabama. I started doing web and graphic 
+              <p>I'm a UI/UX Developer living and working in southeast Alabama. I started doing web and graphic 
                 design in 1996 and over the last few years have started programming in JavaScript.</p>
               <p>I enjoy finding creative ways to communicate information simply and have a passion for removing 
                 obstacles so customers can focus on their goals.</p>
-            </section>
 
-            <section>
-              <header>Resume</header>
-              <p>Coming Soon</p>
-              {
-              //<!--Resume with descending timeline down the side-->
-              }
-            </section>
-
-            <section>
-              <header>Portfolio</header>
-              <p>Coming Soon</p>
-              {
-              //AAA Cooper - use wayback machine to compare/contrast old and new websites. Highlight the logo revamp and updated look and feel that moved web division to a newer tech stack allowing for easier updates. 
-              //OppSeek & Hive Buddy - start wireframes and planning (future examples once finished)
-              //Maybe dig through work folders and see if I can find any old websites, logos, or illustrations that are worth using-->
-              }
-            </section>
+                
+            <ul data-list="Graphic Design,Illustration,Web Design,UI/UX Design,Other Cool Stuff"></ul>
+            {console.log(setTimeout(renderLists, 100))}
             
+            </section>
 
+            
+            
           </main>
 
           <footer>&copy;2020</footer>
@@ -75,6 +64,8 @@
       const domContainer = document.querySelector('#root');
       ReactDOM.render(<App/>, domContainer);  
     </script>
+
+    
     
   </body>
 </html>
